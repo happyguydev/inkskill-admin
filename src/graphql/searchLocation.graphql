@@ -1,0 +1,8 @@
+query SearchLocation($query: String!) {
+    searchLocation(query: $query) {
+        gid
+        city
+        state
+        country
+    }
+}

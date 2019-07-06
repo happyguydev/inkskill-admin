@@ -1,0 +1,14 @@
+query Users {
+  users {
+    _id
+    username
+    name
+    email
+    role
+    createdAt
+    isVerified
+    isActivated
+    isPopular
+    isAdmin
+  }
+}

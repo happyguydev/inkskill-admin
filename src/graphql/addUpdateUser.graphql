@@ -1,0 +1,21 @@
+mutation AddUpdateUser($id: ID, $data: EditUserInput) {
+  addUpdateUser(id: $id, data: $data) {
+    _id
+    username
+    name
+    email
+    role
+    createdAt
+    isAdmin
+    gender
+    location {
+      gid
+      city
+      state
+      country
+    }
+    urls {
+      web
+    }
+  }
+}

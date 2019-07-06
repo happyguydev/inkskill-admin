@@ -1,0 +1,25 @@
+query UserByUserName($username: String!) {
+    profile(username: $username) {
+        _id
+        username
+        name
+        email
+        role
+        createdAt
+        isVerified
+        isActivated
+        isPopular
+        isAdmin
+        location {
+            gid
+            city
+            state
+            country
+        }
+        gender
+        createdAt
+        urls {
+            web
+        }
+    }
+}

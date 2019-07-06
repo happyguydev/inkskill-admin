@@ -1,0 +1,76 @@
+body, div, span, header, footer, nav, section, aside, article, ul, dl, dt, dd, li, a, p, h1, h2, h3, h4,h5, h6, i, b, textarea, button, input, select, figure, figcaption {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-style: normal;
+  font-size: 16px;
+  text-decoration: none;
+  border: none;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  -webkit-tap-highlight-color:transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  &:focus {
+      outline: none;
+  }
+}
+#root {
+  height: 100%;
+}
+
+.App {
+  height: 100%;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 100;
+  display: none; /* none by default, but block on "open" of the menu*/
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0; /* override default ul*/
+  list-style: none;
+  text-align: left; /* Ensures proper alignment if parent has it changed (e.g., modal footer)*/
+  background-color: white;
+  border: none;
+  background-clip: padding-box;
+}
+
+/* Links within the dropdown menu*/
+.dropdown-menu> li {
+  display: block;
+  cursor: pointer;
+  padding: 10px 20px;
+  clear: both;
+  font-weight: normal;
+  white-space: nowrap; /* prevent links from randomly breaking onto new lines*/
+}
+
+.dropdown-menu > li:hover, .dropdown-menu > li:focus {
+   text-decoration: none;
+   color: black;
+   background-color: white;
+}
+
+/* Active state*/
+.dropdown-menu > .active, .dropdown-menu > .active:hover, .dropdown-menu > .active:focus {
+   color: white;
+   text-decoration: none;
+   outline: 0;
+   background-color: blue;
+}
+
+
+/* Open state for the dropdown*/
+.open > .dropdown-menu{
+/* Show the menu*/
+  display: block;
+}
+
+/* Remove the outline when :focus is triggered*/
+.open > a {
+  outline: 0;
+}

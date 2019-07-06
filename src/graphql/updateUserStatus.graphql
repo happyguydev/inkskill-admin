@@ -1,0 +1,9 @@
+mutation UpdateUserStatus($id: ID!, $type: UserStatusType!, $value: Boolean!) {
+  updateUserStatus(id: $id, type: $type, value: $value) {
+    _id
+    isVerified
+    isActivated
+    isPopular
+    isAdmin
+  }
+}
